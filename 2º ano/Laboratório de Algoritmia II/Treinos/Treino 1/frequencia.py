@@ -18,3 +18,20 @@ def frequencia(texto):
     palavras = list(palavras)
     palavras.sort(key=lambda x: (dicionario[x],x))
     return palavras
+
+100%
+
+def frequencia(texto):
+    
+    texto2 = texto.split(" ")
+    d={}
+    ##cria dicionario com valor de repeticão {'tempo':2, 'ao':3}
+    for palavra in texto2:
+        x=texto2.count(palavra)
+        d[palavra] = x
+        
+    ## ordena os itens de maneira decrescente (maior para menor), se não for possivel oredena por ordem alfabética
+    result=sorted(d.keys(), key = lambda x: (-d[x],x) )   
+    
+    return result
+    
